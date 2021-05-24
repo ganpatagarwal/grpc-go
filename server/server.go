@@ -9,7 +9,7 @@ import (
 	"net"
 	"os"
 
-	pb "github.com/ganpatagarwal/grpc-go/status"
+	pb "github.com/ganpatagarwal/grpc-go/protobuf"
 	"google.golang.org/grpc"
 	"google.golang.org/protobuf/proto"
 )

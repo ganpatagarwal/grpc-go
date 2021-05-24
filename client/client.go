@@ -5,7 +5,7 @@ import (
 	"flag"
 	"log"
 
-	pb "github.com/ganpatagarwal/grpc-go/status"
+	pb "github.com/ganpatagarwal/grpc-go/protobuf"
 
 	"google.golang.org/grpc"
 )

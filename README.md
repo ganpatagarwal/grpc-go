@@ -9,18 +9,21 @@
 ├── go.sum
 ├── protobuf
 │   ├── status.pb.go
+│   ├── status.proto
 │   └── status_grpc.pb.go
-├── server
-│   └── server.go
-└── status
-    ├── status.pb.go
-    ├── status.proto
-    └── status_grpc.pb.go
+└── server
+    └── server.go
 ```
 
-## status
+## protobuf
 
 contains `.proto` file and generated `.pb.go` & `grpc.pb.go` file
+
+#### command to generate
+```
+protoc --go_out=. --go_opt=paths=source_relative \                                                                                    master
+    --go-grpc_out=. --go-grpc_opt=paths=source_relative status.proto
+```
 
 ## server
 
