@@ -1,0 +1,32 @@
+syntax = "proto3";
+package status;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "../protobuf";
+
+// individual status data
+message Status {
+  string fqdn = 1;
+  string ip = 2;
+  bool status = 3;
+  google.protobuf.Timestamp last_updated = 4;
+}
+
+// consolidated status data
+message StatusReport {
+  repeated Status status = 1;
+}
+
+message StatusQuery {
+    string fqdn = 1;
+}
+
+message StatusUpdate {
+    bool status = 1;
+}
+
+service StatusService {
+    rpc ReadStatus(StatusQuery) returns (Status) {}
+    rpc UpdateStatus(Status) returns (StatusUpdate) {}
+}
