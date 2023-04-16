@@ -4,13 +4,13 @@
 .
 ├── README.md
 ├── client
-│   └── client.go
+│ └── client.go
 ├── go.mod
 ├── go.sum
 ├── protobuf
-│   ├── status.pb.go
-│   ├── status.proto
-│   └── status_grpc.pb.go
+│ ├── status.pb.go
+│ ├── status.proto
+│ └── status_grpc.pb.go
 └── server
     └── server.go
 ```
